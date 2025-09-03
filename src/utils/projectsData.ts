@@ -22,7 +22,8 @@ import devuhub from "../assets/projects/devhub.png"
 import michele from "../assets/projects/michele-cortinass.png"
 import tourlis from "../assets/projects/tourlis.png"
 import miniprojeto from "../assets/projects/miniprojeto.png"
-
+import inmobel from "../assets/projects/inmobel.png"
+import jarvis from "../assets/projects/JARVIS.png"
 export type Locale = 'en' | 'pt';
 
 export interface Project {
@@ -51,6 +52,29 @@ interface ProjectTranslations {
 
 export const projectTranslations: ProjectTranslations = {
   pt: {
+       11: {
+      title: 'JARVIS',
+      description: '"Just a Rather Very Intelligent System" Programa para automações web para tarefas repetivas',
+      features: [
+        'Diversas automações web',
+        'Adaptável a instabilidades',
+        'Tratamento de erros robusto',
+        'Compativel com grande volume de dados',
+      ],
+    },
+
+    10: {
+      title: 'Inmobel Móveis Planejados',
+      description: 'Site para vitrine da empresa, apresentação de portfólio e serviços',
+      features: [
+        'Portfólio de projetos',
+        'Aba "Contate-nos"',
+        'Responsivo',
+        'Integração com Whatsapp',
+        
+      ],
+    },
+
     1: {
       title: 'Impermaq Máquinas',
       description: 'Site para vitrine de produtos e serviços e vendas de maquinas industriais',
@@ -146,6 +170,29 @@ export const projectTranslations: ProjectTranslations = {
     },
   },
   en: {
+       11: {
+      title: 'JARVIS',
+      description: '"Just a Rather Very Intelligent System" Program for repetive web tasks',
+      features: [
+        'multiple web automations',
+        'Adaptable to instability',
+        'Robust error handling',
+        'Compatible with a big amount of data',
+      ],
+    },
+
+    10: {
+      title: 'Inmobel Móveis Planejados',
+      description: 'Site para vitrine da empresa, apresentação de portfólio e serviços',
+      features: [
+        'Projects portfolio',
+        '"Contact-us" section',
+        'Responsive design',
+        'WhatsApp integration',
+        
+      ],
+    },
+
     1: {
       title: 'Impermaq Machines',
       description: 'Website for product and service showcase and industrial machine sales',
@@ -243,6 +290,30 @@ export const projectTranslations: ProjectTranslations = {
 };
 
 export const projectsBaseData: Omit<Project, 'title' | 'description' | 'features'>[] = [
+      {
+    id: 11,
+    image: jarvis,
+    previewUrl: '',
+    repoUrl: '  ',
+    technologies: [
+      { name: 'Python', icon: python },
+  
+    ],
+  },
+  
+  {
+    id: 10,
+    image: inmobel,
+    previewUrl: 'https://inmobel-design-studio.vercel.app',
+    repoUrl: 'https://github.com/Gabriel-barbos/impermaq-V2',
+    technologies: [
+      { name: 'React', icon: react },
+      { name: 'JavaScript', icon: js },
+      { name: 'CSS', icon: css },
+      { name: 'Tailwind CSS', icon: tailwind },
+    ],
+  },
+  
   {
     id: 1,
     image: impermaq,
