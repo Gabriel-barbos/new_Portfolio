@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Github, Linkedin } from 'lucide-react';
-import prof from "../assets/me.jpg"
+import prof from "../assets/profile.jpeg"
 
 const About = () => {
   const { t } = useLanguage();

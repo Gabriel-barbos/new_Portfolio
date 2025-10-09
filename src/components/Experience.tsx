@@ -30,7 +30,7 @@ const Experience = () => {
       company: "Scope Technology",
       startDate: "2023-05",
       endDate: null,
-      technologies: ["Excel", "TypeScript", "React", "IoT", "Canva", "Notion"],
+      technologies: ["Excel", "TypeScript", "React", "IoT", "Canva", "Python", "Node.js"],
       logo: scope,
     },
     {
@@ -44,8 +44,8 @@ const Experience = () => {
     {
       id: "job3",
       company: "",
-      startDate: "2024-004",
-      endDate: "2024-012",
+      startDate: "2024-04",
+      endDate: "2024-12",
       technologies: ["Quiz", "Notion"],
       logo: teacher,
     },

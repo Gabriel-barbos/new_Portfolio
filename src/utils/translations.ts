@@ -251,8 +251,8 @@ export const translations: Translations = {
       viewDetails: 'Ver Detalhes',
       jobs: {
         job1: {
-          position: 'Estagiário de T.I',
-          description: 'Participei de todo o processo de programação e testes de equipamentos de telemetria veicular, aumentando a produtividade com automações criadas no Notion e Excel. Desenvolvi materiais de treinamento (vídeos e documentos) voltados aos clientes da plataforma, contribuindo para a melhoria na experiência e satisfação. Também atuei na criação de dois sistemas web para conversão de códigos criptografados, otimizando um processo que antes era feito manualmente e reduzindo significativamente o tempo de trabalho da equipe técnica.',
+          position: 'Support Analyst',
+          description: 'Atuo na resolução de tickets de suporte ao cliente, solucionando problemas nas plataformas e esclarecendo dúvidas sobre o sistema. Também participo no desenvolvimento de melhorias sistêmicas e aplicações internas voltadas a aumentar a produtividade e a eficiência operacional. Durante minha jornada na Scope, desenvolvi softwares de automação e integrações via API que modernizaram processos internos, como um sistema de emissão automática de notas fiscais integrado à SEFAZ, sites para conversão de códigos criptografados que substituíram planilhas manuais e um RPA para automações web repetitivas, reduzindo tempo e erros operacionais. Além disso, contribuí na programação e testes de equipamentos de telemetria veicular e na criação de materiais de treinamento para aprimorar a experiência dos cliente',
           location: 'São Paulo, SP',
         },
         job2: {

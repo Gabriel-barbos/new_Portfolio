@@ -172,4 +172,48 @@ export const certifications: Certification[] = [
     type: "course",
     theme: "default"
   },
+    {
+    id: 16,
+    name: "Modernize Infrastructure and Applications with Google Cloud",
+    issuer: "Google",
+    issuerLogo: google,
+    date: "2025-07-26",
+    credentialUrl: "https://www.cloudskillsboost.google/public_profiles/e6218dc7-e424-4687-a921-181ddfb57c80/badges/18641542",
+    skills: ["Google Cloud", "Cloud Computing", "AI", "Network", "Machine Learning"],
+    type: "course",
+    theme: "google"
+  },
+     {
+    id: 16,
+    name: "Digital Transformation with Google Cloud",
+    issuer: "Google",
+    issuerLogo: google,
+    date: "2025-07-26",
+    credentialUrl: "https://www.cloudskillsboost.google/public_profiles/e6218dc7-e424-4687-a921-181ddfb57c80/badges/18641474",
+    skills: ["Google Cloud", "Cloud Computing", "AI", "Network", "Machine Learning"],
+    type: "course",
+    theme: "google"
+  },
+       {
+    id: 17,
+    name: "Criar um serviço de IoT para seus aplicativos nativos de nuvem usando o IoT Central",
+    issuer: "Microsoft",
+    issuerLogo: azure,
+    date: "2025-09-21",
+    credentialUrl: "https://learn.microsoft.com/api/achievements/share/pt-br/GabrielBarbosa-4747/8Z877R7W?sharingId=F1C330B23F9BEFC9",
+    skills: ["C#", "Cloud Computing", "AI", "IoT", "Azure"],
+    type: "certification",
+    theme: "azure"
+  },
+       {
+    id: 18,
+    name: "Orquestrar contêineres para aplicativos nativos de nuvem com o AKS",
+    issuer: "Microsoft",
+    issuerLogo: azure,
+    date: "2025-09-21",
+    credentialUrl: "https://learn.microsoft.com/api/achievements/share/pt-br/GabrielBarbosa-4747/8Z877R7W?sharingId=F1C330B23F9BEFC9",
+    skills: ["C#", "Cloud Computing", "AI", "IoT", "Azure"],
+    type: "certification",
+    theme: "azure"
+  },
 ];

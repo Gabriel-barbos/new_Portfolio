@@ -294,7 +294,7 @@ export const projectsBaseData: Omit<Project, 'title' | 'description' | 'features
     id: 11,
     image: jarvis,
     previewUrl: '',
-    repoUrl: '  ',
+    repoUrl: 'https://github.com/Gabriel-barbos/Jarvis',
     technologies: [
       { name: 'Python', icon: python },
   
@@ -304,8 +304,8 @@ export const projectsBaseData: Omit<Project, 'title' | 'description' | 'features
   {
     id: 10,
     image: inmobel,
-    previewUrl: 'https://inmobel-design-studio.vercel.app',
-    repoUrl: 'https://github.com/Gabriel-barbos/impermaq-V2',
+    previewUrl: 'https://www.inmobelmoveis.com.br',
+    repoUrl: 'https://github.com/Gabriel-barbos/inmobel-moveis',
     technologies: [
       { name: 'React', icon: react },
       { name: 'JavaScript', icon: js },
