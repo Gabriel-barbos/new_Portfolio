@@ -107,6 +107,11 @@ export const translations: Translations = {
       period: 'Period',
       languages: 'Languages',
       cards: [
+          {
+          degree: 'Bachelors degree in software engineering' ,
+          institution: 'FIAP',
+          description: 'My training is focused on designing and developing complete technological solutions within the field of Software Engineering. This includes creating applications for desktop, web, mobile devices, cloud environments, and the Internet of Things (IoT). Throughout the program, I studied essential subjects such as programming logic, algorithms, databases, artificial intelligence, cloud computing, information security, software engineering principles, user experience (UX), and agile development methodologies.',
+        },
         {
           degree: 'Technologist in Multiplatform Software Development',
           institution: 'FATEC Zona Leste',
@@ -276,6 +281,11 @@ export const translations: Translations = {
       period: 'Período',
       languages: 'Idiomas',
       cards: [
+          {
+          degree: 'Bacharelado em Engenharia de Software' ,
+          institution: 'FIAP',
+          description: 'Minha formação é voltada para a criação e desenvolvimento de soluções tecnológicas completas na área de Engenharia de Software. Isso inclui o desenvolvimento de aplicações para desktop, web, dispositivos móveis, ambientes em nuvem e Internet das Coisas (IoT). Durante o curso, estudei disciplinas essenciais como lógica de programação, algoritmos, bancos de dados, inteligência artificial, computação em nuvem, segurança da informação, engenharia de software, experiência do usuário (UX) e metodologias ágeis',
+        },
         {
           degree: 'Tecnólogo em Desenvolvimento de Software Multiplataforma',
           institution: 'FATEC Zona Leste',

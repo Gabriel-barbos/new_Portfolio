@@ -7,6 +7,7 @@ import { Badge } from './ui/badge';
 import fatec from "../assets/fatec.png";
 import etec from "../assets/etec.jpg";
 import wizard from "../assets/wizard.jpg";
+import fiap from "../assets/icons/fiap.png";
 
 // Definição de tipo Education com logo e ícone
 interface Education {
@@ -40,9 +41,15 @@ const Education: React.FC = () => {
 
   // Construindo educationData com logos, ícones e cores fixas
   const educationData: Education[] = translatedEducation.map((item, index) => {
-    const logos = [fatec, etec, wizard];
-    const icons = [GraduationCap, Award, BookOpen];
-    const colors = ["from-blue-600 to-indigo-600", "from-amber-500 to-orange-600", "from-red-500 to-red-600"];
+    const logos = [fiap, fatec, etec, wizard];
+    const icons = [GraduationCap, Award, BookOpen, Globe];
+    const colors = [
+      "from-red-500 to-red-600",
+      "from-amber-500 to-orange-600",
+      "from-blue-600 to-indigo-600",
+      "from-emerald-500 to-emerald-600",
+    ];
+
 
     return {
       degree: item.degree,

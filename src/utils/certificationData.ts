@@ -5,6 +5,8 @@ import santander from "../assets/icons/santander.png";
 import dio from "../assets/icons/dio2.png";
 import bradesco from "../assets/icons/bradesco.png";
 import jovem from "../assets/icons/eng.png";
+import aws from "../assets/icons/aws.png";
+
 export interface Certification {
   id: number;
   name: string;
@@ -18,6 +20,7 @@ export interface Certification {
 }
 
 export const certifications: Certification[] = [
+  
   {
     id: 1,
     name: "Google Cloud Computing Foundations Certificate",
@@ -25,6 +28,17 @@ export const certifications: Certification[] = [
     issuerLogo: google,
     date: "2024-05-26",
     credentialUrl: "https://www.credly.com/badges/adef3268-9dfe-496f-918d-26e46640255a/public_url",
+    skills: ["Cloud Architecture", "Virtual Machine", "Ai", "Cloud Storage", "Cloud Network"],
+    type: "certification",
+    theme: "special"
+  },
+  {
+    id: 19,
+    name: "AWS Academy Graduate - Cloud Foundations",
+    issuer: "AWS",
+    issuerLogo: aws,
+    date: "2024-05-26",
+    credentialUrl: "https://www.credly.com/badges/b72ba373-0301-4375-b5c3-8894b44696af/linked_in_profile",
     skills: ["Cloud Architecture", "Virtual Machine", "Ai", "Cloud Storage", "Cloud Network"],
     type: "certification",
     theme: "special"
