@@ -12,7 +12,7 @@ interface Translations {
 export const translations: Translations = {
   en: {
     description: {
-      part1: 'Software Development student ',
+      part1: 'Software Engineer Student',
       part2: 'committed to creating ',
       highlight: 'innovative and efficient solutions',
       part3: ' for diverse problems.',
@@ -184,7 +184,7 @@ export const translations: Translations = {
 
   pt: {
     description: {
-      part1: 'Estudante de Desenvolvimento de Software Multiplataforma ',
+      part1: 'Estudante de Engenharia de Software ',
       part2: 'empenhado em criar ',
       highlight: 'soluções inovadoras e eficientes',
       part3: ' para problemas diversos.',
