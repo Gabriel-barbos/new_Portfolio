@@ -6,6 +6,7 @@ import dio from "../assets/icons/dio2.png";
 import bradesco from "../assets/icons/bradesco.png";
 import jovem from "../assets/icons/eng.png";
 import aws from "../assets/icons/aws.png";
+import fiap from "../assets/icons/fiap.png";
 
 export interface Certification {
   id: number;
@@ -16,7 +17,7 @@ export interface Certification {
   credentialUrl: string;
   skills: string[];
   type: 'certification' | 'course';
-  theme: 'google' | 'azure' | 'ibm' | 'dio' | 'santander' | 'aws' | 'meta' | 'special' | 'default';
+  theme: 'google' | 'azure' | 'ibm' | 'dio' | 'santander' | 'aws' | 'meta' | 'special' | 'default' | 'fiap';
 }
 
 export const certifications: Certification[] = [
@@ -53,6 +54,17 @@ export const certifications: Certification[] = [
     skills: ["Projects", "Management", "Software development"],
     type: "certification",
     theme: "santander"
+  },
+  {
+    id: 19,
+    name: "Agentes Autônomos (Agentic AI)",
+    issuer: "Fiap",
+    issuerLogo: fiap,
+    date: "2025-04-16",
+    credentialUrl: "https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=f04096416194f572dd840d8627d36fed&action=view",
+    skills: ["Machine Learning", "AI", "Autonomous Agents","Chat Bots"],
+    type: "course",
+    theme: "fiap"
   },
   {
     id: 3,

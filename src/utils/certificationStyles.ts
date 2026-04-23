@@ -54,6 +54,15 @@ export interface ThemeStyle {
       shadow: 'shadow-md',
       hoverShadow: 'hover:shadow-lg'
     },
+    fiap: {
+      gradient: 'from-pink-600 to-red-900',
+      borderColor: 'border-pink-200 dark:border-pink-800',
+      hoverBorder: 'hover:border-pink-400 dark:hover:border-pink-600',
+      accentColor: 'text-pink-700 dark:text-pink-400',
+      badgeColor: 'bg-pink-100 text-pink-800 border-pink-200 dark:bg-pink-900/30 dark:text-pink-300 dark:border-pink-700',
+      shadow: 'shadow-md',
+      hoverShadow: 'hover:shadow-lg'
+    },
     aws: {
       gradient: 'from-orange-500 to-yellow-600',
       borderColor: 'border-orange-200 dark:border-orange-700',

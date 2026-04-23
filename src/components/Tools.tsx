@@ -27,6 +27,11 @@ import windows from "../assets/icons/windows.png";
 import word from "../assets/icons/word.png";
 import vscode from "../assets/icons/vscode.png";
 import sheets from "../assets/icons/sheets.png";
+import claude from "../assets/icons/claude.webp";
+import antigravity from "../assets/icons/antigravity.jpg";
+import expo from "../assets/icons/expo.png";
+import codex from "../assets/icons/codex.png";
+
 
 type SkillLevel = 'Básico' | 'Intermediário' | 'Avançado';
 
@@ -42,18 +47,18 @@ const Tools = () => {
   const tools: Tool[] = [
     { name: 'Figma', icon: figma, level: 'Avançado' },
     { name: 'SketchUp', icon: sketchup, level: 'Avançado' },
-    { name: 'Bootstrap', icon: bootstrap, level: 'Básico' },
+    { name: 'Claude Code', icon: claude, level: 'Avançado' },
+    { name: 'Antigravity', icon: antigravity, level: 'Avançado' },
+    { name: 'Expo', icon: expo, level: 'Avançado' },
     { name: 'AutoCad', icon: autocad, level: 'Intermediário' },
     { name: 'Git', icon: git, level: 'Avançado' },
     { name: 'Github', icon: github, level: 'Intermediário' },
     { name: 'FastAPI', icon: fastapi, level: 'Intermediário' },
     { name: 'Visual Studio Code', icon: vscode, level: 'Avançado' },
-    { name: 'Ant Design', icon: antdesign, level: 'Avançado' },
     { name: 'Aceternity UI', icon: aceternity, level: 'Intermediário' },
-    { name: 'Magic UI', icon: magicUI, level: 'Intermediário' },
     { name: 'Notion', icon: notion, level: 'Avançado' },
     { name: 'Canva', icon: canva, level: 'Avançado' },
-    { name: 'Google Sheets', icon: sheets, level: 'Intermediário' },
+    { name: 'Codex', icon: codex, level: 'Avançado' },
     { name: 'Edição de Vídeo', icon: video, level: 'Avançado' },
     { name: 'Windows', icon: windows, level: 'Avançado' },
     { name: 'Word', icon: word, level: 'Avançado' },
