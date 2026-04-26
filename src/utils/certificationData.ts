@@ -17,7 +17,8 @@ export interface Certification {
   credentialUrl: string;
   skills: string[];
   type: 'certification' | 'course';
-  theme: 'google' | 'azure' | 'ibm' | 'dio' | 'santander' | 'aws' | 'meta' | 'special' | 'default' | 'fiap';
+  theme: 'google' | 'azure' | 'ibm' | 'dio' | 'santander' | 'aws' | 'meta' | 'default' | 'fiap';
+  isSpecial?: boolean;
 }
 
 export const certifications: Certification[] = [
@@ -31,7 +32,8 @@ export const certifications: Certification[] = [
     credentialUrl: "https://www.credly.com/badges/adef3268-9dfe-496f-918d-26e46640255a/public_url",
     skills: ["Cloud Architecture", "Virtual Machine", "Ai", "Cloud Storage", "Cloud Network"],
     type: "certification",
-    theme: "special"
+    theme: "google",
+    isSpecial: true
   },
   {
     id: 19,
@@ -42,10 +44,11 @@ export const certifications: Certification[] = [
     credentialUrl: "https://www.credly.com/badges/b72ba373-0301-4375-b5c3-8894b44696af/linked_in_profile",
     skills: ["Cloud Architecture", "Virtual Machine", "Ai", "Cloud Storage", "Cloud Network"],
     type: "certification",
-    theme: "special"
+    theme: "aws",
+    isSpecial: true
   },
   {
-    id: 2,
+    id: 4,
     name: "Introdução À Gestão De Projetos",
     issuer: "Bradesco",
     issuerLogo: bradesco,
@@ -64,7 +67,19 @@ export const certifications: Certification[] = [
     credentialUrl: "https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=f04096416194f572dd840d8627d36fed&action=view",
     skills: ["Machine Learning", "AI", "Autonomous Agents","Chat Bots"],
     type: "course",
-    theme: "fiap"
+    theme: "fiap",
+  },
+  {
+    id: 20,
+    name: "Chatbots",
+    issuer: "Fiap",
+    issuerLogo: fiap,
+    date: "2025-04-24",
+    credentialUrl: "https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=6526af44be2aaee6dff30a26dc0b698c&action=view",
+    skills: ["prompt engineering", "AI", "Chat Bots"],
+    type: "certification",
+    theme: "fiap",
+    isSpecial: true
   },
   {
     id: 3,

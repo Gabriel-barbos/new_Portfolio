@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
-import { ExternalLink, Calendar, Award, BookOpen, GraduationCap, Star } from 'lucide-react';
+import { ExternalLink, Calendar, Award, BookOpen, GraduationCap } from 'lucide-react';
 import { Button } from './ui/button';
-import { BackgroundGradient } from './ui/background-gradient';
+import { PremiumCertificationCard } from './ui/PremiumCertificationCard';
 
 import { certifications, type Certification } from '../utils/certificationData';
 import { getThemeStyles } from '../utils/certificationStyles';
@@ -44,22 +44,18 @@ const Certifications = () => {
             <div className="flex-1 pr-4">
               <CardTitle className="text-lg leading-tight group-hover:text-foreground transition-colors duration-200">
                 {cert.name}
-                {cert.theme === 'special' && (
-                  <Star className="inline-block h-4 w-4 ml-2 text-yellow-500 fill-yellow-500" />
-                )}
               </CardTitle>
               <div className="flex items-center mt-2">
                 {cert.type === 'certification' ? (
-                  <Award className={`h-4 w-4 mr-2 ${cert.theme === 'special' ? 'text-purple-600' : themeStyles.accentColor}`} />
+                  <Award className={`h-4 w-4 mr-2 ${themeStyles.accentColor}`} />
                 ) : (
-                  <BookOpen className={`h-4 w-4 mr-2 ${cert.theme === 'special' ? 'text-purple-600' : themeStyles.accentColor}`} />
+                  <BookOpen className={`h-4 w-4 mr-2 ${themeStyles.accentColor}`} />
                 )}
                 <span className="text-sm text-muted-foreground capitalize">
                   {cert.type === 'certification' 
                     ? t('certifications.badges.certification') 
                     : t('certifications.badges.course')
                   }
-                  {cert.theme === 'special' && ` ${t('certifications.badges.special')}`}
                 </span>
               </div>
             </div>
@@ -111,12 +107,7 @@ const Certifications = () => {
           <Button 
             variant="ghost" 
             size="sm" 
-            className={`w-full group-hover:bg-primary/10 transition-all duration-200 border border-primary/20 hover:border-primary/40 rounded-lg
-              ${cert.theme === 'special' 
-                ? 'text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 hover:bg-gradient-to-r hover:from-pink-600/10 hover:via-purple-600/10 hover:to-blue-600/10' 
-                : `${themeStyles.accentColor} hover:${themeStyles.accentColor}`
-              }
-            `}
+            className={`w-full group-hover:bg-primary/10 transition-all duration-200 border border-primary/20 hover:border-primary/40 rounded-lg ${themeStyles.accentColor}`}
             asChild
           >
             <a href={cert.credentialUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
@@ -130,17 +121,15 @@ const Certifications = () => {
       </>
     );
 
-    if (cert.theme === 'special') {
+    if (cert.isSpecial) {
       return (
-        <BackgroundGradient 
+        <PremiumCertificationCard
           key={cert.id}
-          className="p-0 overflow-hidden"
-          containerClassName="transition-all duration-300 ease-out hover:scale-[1.02] hover:-translate-y-1"
-        >
-          <Card className={`group relative overflow-hidden transition-all duration-300 ease-out bg-card border-0 ${themeStyles.shadow} ${themeStyles.hoverShadow} cursor-pointer h-full`}>
-            {cardContent}
-          </Card>
-        </BackgroundGradient>
+          cert={cert}
+          themeStyles={themeStyles}
+          formatDate={formatDate}
+          t={t}
+        />
       );
     }
 
