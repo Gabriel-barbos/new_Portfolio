@@ -142,6 +142,9 @@ const Certifications = () => {
       </Card>
     );
   };
+  const certsCount = certifications.filter(cert => cert.type === 'certification').length;
+  const coursesCount = certifications.filter(cert => cert.type === 'course').length;
+  const totalCount = certifications.length;
 
   return (
     <section id="certifications" className="py-20">
@@ -154,9 +157,9 @@ const Certifications = () => {
         <div className="flex justify-center mb-10">
           <div className="inline-flex rounded-lg bg-muted p-1">
             {[
-              { key: 'certifications', label: t('certifications.tabs.certifications'), icon: Award },
-              { key: 'courses', label: t('certifications.tabs.courses'), icon: BookOpen },
-              { key: 'all', label: t('certifications.tabs.all'), icon: GraduationCap }
+              { key: 'certifications', label: `${t('certifications.tabs.certifications')} (${certsCount})`, icon: Award },
+              { key: 'courses', label: `${t('certifications.tabs.courses')} (${coursesCount})`, icon: BookOpen },
+              { key: 'all', label: `${t('certifications.tabs.all')} (${totalCount})`, icon: GraduationCap }
             ].map(({ key, label, icon: Icon }) => (
               <button
                 key={key}

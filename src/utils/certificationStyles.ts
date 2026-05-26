@@ -97,6 +97,18 @@ export interface ThemeStyle {
       glowGradient: 'linear-gradient(135deg, rgba(249,115,22,0.8) 0%, rgba(234,179,8,0.65) 100%)',
       specialBadgeGradient: 'from-orange-500 to-yellow-500',
     },
+    alura: {
+      gradient: 'from-[#051933] via-blue-900 to-blue-700',
+      borderColor: 'border-blue-900 dark:border-blue-950',
+      hoverBorder: 'hover:border-blue-700 dark:hover:border-blue-800',
+      accentColor: 'text-blue-900 dark:text-blue-200',
+      badgeColor: 'bg-blue-950/10 text-blue-900 border-blue-800 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800',
+      shadow: 'shadow-md',
+      hoverShadow: 'hover:shadow-lg hover:shadow-blue-900/30',
+      glowColor: 'rgba(5,25,51,0.7)',
+      glowGradient: 'linear-gradient(135deg, rgba(5,25,51,0.85) 0%, rgba(30,58,138,0.65) 60%, rgba(29,78,216,0.5) 100%)',
+      specialBadgeGradient: 'from-[#051933] via-blue-900 to-blue-700',
+    },
     default: {
       gradient: 'from-gray-600 to-gray-800',
       borderColor: 'border-border',

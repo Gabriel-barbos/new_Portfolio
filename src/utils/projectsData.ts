@@ -27,7 +27,7 @@ import tourlis from "../assets/projects/tourlis.png"
 import miniprojeto from "../assets/projects/miniprojeto.png"
 import inmobel from "../assets/projects/inmobel.png"
 import jarvis from "../assets/projects/JARVIS.png"
-import aiLobby from "../assets/projects/AIlobby.png"
+import aiLobby from "../assets/projects/Ailobby.png"
 import am from "../assets/projects/am.png"
 export type Locale = 'en' | 'pt';
 
