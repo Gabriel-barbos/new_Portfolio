@@ -12,6 +12,9 @@ import html from "../assets/icons-globe/html.png"
 import css from "../assets/icons-globe/css.png"
 import sql from "../assets/icons-globe/mysql.png"
 import powerbi from "../assets/icons-globe/powerbi.png"
+import claude from "../assets/icons/claude.png"
+import gemini from "../assets/icons/gemini.png"
+import telegram from "../assets/icons/telegram.png"
 
 import impermaq from "../assets/projects/impermaq (2).png";
 import vendas from "../assets/projects/vendas.png";
@@ -24,6 +27,8 @@ import tourlis from "../assets/projects/tourlis.png"
 import miniprojeto from "../assets/projects/miniprojeto.png"
 import inmobel from "../assets/projects/inmobel.png"
 import jarvis from "../assets/projects/JARVIS.png"
+import aiLobby from "../assets/projects/AIlobby.png"
+import am from "../assets/projects/am.png"
 export type Locale = 'en' | 'pt';
 
 export interface Project {
@@ -52,6 +57,17 @@ interface ProjectTranslations {
 
 export const projectTranslations: ProjectTranslations = {
   pt: {
+
+    12: {
+      title: 'AI Lobby',
+      description: 'Hub de agentes de IA especializadas em tarefas + bot telegram para interagir com os agentes',
+      features: [
+        'Agentes especializados',
+        'API Integrada com openai e gemini e Claude',
+        'Chat em tempo real',
+        'Notificações via telegram',
+      ],
+    },
        11: {
       title: 'JARVIS',
       description: '"Just a Rather Very Intelligent System" Programa para automações web para tarefas repetivas',
@@ -60,6 +76,18 @@ export const projectTranslations: ProjectTranslations = {
         'Adaptável a instabilidades',
         'Tratamento de erros robusto',
         'Compativel com grande volume de dados',
+      ],
+    },
+
+    13: {
+      title: 'AM Engenharia',
+      description: 'Site para vitrine da empresa, apresentação de portfólio e serviços',
+      features: [
+        'Portfólio de projetos',
+        'Aba "Contate-nos"',
+        'Responsivo',
+        'Integração com Whatsapp',
+        "Envio de Emails"
       ],
     },
 
@@ -170,26 +198,47 @@ export const projectTranslations: ProjectTranslations = {
     },
   },
   en: {
-       11: {
-      title: 'JARVIS',
-      description: '"Just a Rather Very Intelligent System" Program for repetive web tasks',
+    12: {
+      title: 'AI Lobby',
+      description: 'Hub of AI agents specialized in tasks + telegram bot to interact with agents',
       features: [
-        'multiple web automations',
+        'Specialized agents',
+        'Integrated API with OpenAI, Gemini, and Claude',
+        'Real-time chat',
+        'Notifications via Telegram',
+      ],
+    },
+    11: {
+      title: 'JARVIS',
+      description: '"Just a Rather Very Intelligent System" Program for repetitive web tasks',
+      features: [
+        'Multiple web automations',
         'Adaptable to instability',
         'Robust error handling',
         'Compatible with a big amount of data',
       ],
     },
 
+    13: {
+      title: 'AM Engenharia',
+      description: 'Showcase website for the company, presenting portfolio and services',
+      features: [
+        'Projects portfolio',
+        '"Contact Us" section',
+        'Responsive design',
+        'WhatsApp integration',
+        'Email dispatch',
+      ],
+    },
+
     10: {
       title: 'Inmobel Móveis Planejados',
-      description: 'Site para vitrine da empresa, apresentação de portfólio e serviços',
+      description: 'Showcase website for the company, presenting portfolio and services',
       features: [
         'Projects portfolio',
         '"Contact-us" section',
         'Responsive design',
         'WhatsApp integration',
-        
       ],
     },
 
@@ -290,7 +339,23 @@ export const projectTranslations: ProjectTranslations = {
 };
 
 export const projectsBaseData: Omit<Project, 'title' | 'description' | 'features'>[] = [
-      {
+
+  {
+    id: 12,
+    image: aiLobby,
+    previewUrl: '',
+    repoUrl: 'https://github.com/Gabriel-barbos/AiLobby',
+    technologies: [
+      { name: 'TypeScript', icon: typescript },
+      { name: 'React', icon: react },
+      { name: 'Tailwind CSS', icon: tailwind },
+      { name: 'Claude API', icon: claude },
+      { name: 'Gemini API', icon: gemini },
+      { name: 'Telegram Bot API', icon: telegram },
+    ],
+  },
+
+    {
     id: 11,
     image: jarvis,
     previewUrl: '',
@@ -298,6 +363,18 @@ export const projectsBaseData: Omit<Project, 'title' | 'description' | 'features
     technologies: [
       { name: 'Python', icon: python },
   
+    ],
+  },
+
+      {
+    id: 13,
+    image: am,
+    previewUrl: 'https://am-engenharia-landing.vercel.app/',
+    repoUrl: 'https://github.com/Gabriel-barbos/amk',
+    technologies: [
+      { name: 'React', icon: react },
+      { name: 'Tailwind CSS', icon: tailwind },
+      { name: 'TypeScript', icon: typescript },
     ],
   },
   
@@ -427,12 +504,12 @@ export const projectsBaseData: Omit<Project, 'title' | 'description' | 'features
 // Função para obter projetos traduzidos
 export const getTranslatedProjects = (locale: Locale): Project[] => {
   return projectsBaseData.map((baseProject) => {
-    const translation = projectTranslations[locale][baseProject.id];
+    const translation = projectTranslations[locale]?.[baseProject.id] || projectTranslations['pt']?.[baseProject.id];
     return {
       ...baseProject,
-      title: translation.title,
-      description: translation.description,
-      features: translation.features,
+      title: translation?.title || '',
+      description: translation?.description || '',
+      features: translation?.features || [],
     };
   });
 };
@@ -442,7 +519,7 @@ export const getTranslatedProject = (projectId: number, locale: Locale): Project
   const baseProject = projectsBaseData.find(p => p.id === projectId);
   if (!baseProject) return undefined;
 
-  const translation = projectTranslations[locale][projectId];
+  const translation = projectTranslations[locale]?.[projectId] || projectTranslations['pt']?.[projectId];
   if (!translation) return undefined;
 
   return {

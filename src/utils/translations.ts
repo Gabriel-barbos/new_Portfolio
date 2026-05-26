@@ -82,8 +82,8 @@ export const translations: Translations = {
       viewDetails: 'View Details',
       jobs: {
         job1: {
-          position: 'IT Intern',
-          description: 'I participated in the entire process of programming and testing vehicle telemetry equipment, increasing productivity through automations created in Notion and Excel. I developed training materials (videos and documents) for platform clients, contributing to better user experience and satisfaction. I also created two web systems to convert encrypted codes, optimizing a process previously done manually and significantly reducing the technical team’s workload.',
+          position: 'Support Analyst',
+          description: 'I work on resolving customer support tickets, troubleshooting platform issues, and clarifying system doubts. I also participate in developing systemic improvements and internal applications designed to increase productivity and operational efficiency. During my journey at Scope, I developed automation software and API integrations that modernized internal processes, including an automatic invoice issuance system integrated with SEFAZ, web systems for converting encrypted codes that replaced manual spreadsheets, and an RPA for repetitive web automations, reducing operational time and errors. Additionally, I contributed to programming and testing vehicle telemetry equipment and creating training materials to improve the customer experience.',
           location: 'São Paulo, SP',
         },
         job2: {
