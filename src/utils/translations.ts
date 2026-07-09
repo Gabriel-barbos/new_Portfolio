@@ -80,18 +80,24 @@ export const translations: Translations = {
       description: 'Description',
       techTitle: 'Technologies Used',
       viewDetails: 'View Details',
+
       jobs: {
         job1: {
-          position: 'Support Analyst',
-          description: 'I work on resolving customer support tickets, troubleshooting platform issues, and clarifying system doubts. I also participate in developing systemic improvements and internal applications designed to increase productivity and operational efficiency. During my journey at Scope, I developed automation software and API integrations that modernized internal processes, including an automatic invoice issuance system integrated with SEFAZ, web systems for converting encrypted codes that replaced manual spreadsheets, and an RPA for repetitive web automations, reducing operational time and errors. Additionally, I contributed to programming and testing vehicle telemetry equipment and creating training materials to improve the customer experience.',
+          position: 'Support Consultant - GOC (LDC)',
+          description: 'Acting in Louis Dreyfus Company as providing technical support for business-critical applications and services, troubleshooting incidents, resolving operational issues, and ensuring system reliability and performance. Collaborating with cross-functional teams to deliver effective solutions while contributing to software engineering and process automation initiatives to improve efficiency, scalability, and operational excellence.',
           location: 'São Paulo, SP',
         },
         job2: {
+          position: 'Support Analyst',  
+          description: 'I work on resolving customer support tickets, troubleshooting platform issues, and clarifying system doubts. I also participate in developing systemic improvements and internal applications designed to increase productivity and operational efficiency. During my journey at Scope, I developed automation software and API integrations that modernized internal processes, including an automatic invoice issuance system integrated with SEFAZ, web systems for converting encrypted codes that replaced manual spreadsheets, and an RPA for repetitive web automations, reducing operational time and errors. Additionally, I contributed to programming and testing vehicle telemetry equipment and creating training materials to improve the customer experience.',
+          location: 'São Paulo, SP',
+        },
+        job3: {
           position: 'AI Training Expert',
           description: 'I work on training and improving AI models by evaluating and adjusting prompts and responses in English and Portuguese. I deal with a wide variety of topics, mainly focused on analyzing AI-generated code, performing debugging, refactoring, and quality testing to ensure more accurate, coherent, and efficient results.',
           location: 'São Paulo, SP (remote)',
         },
-        job3: {
+        job4: {
           position: 'English Teacher',
           description: 'I taught hybrid English classes, with part of the students in person and part online. I created personalized study materials and a virtual learning environment on Discord with tips, notes, and additional exercises. I also led group activities to make learning more engaging and interactive, enhancing language development through collaboration.',
           location: 'São Paulo, SP',
@@ -254,18 +260,24 @@ export const translations: Translations = {
       description: 'Descrição',
       techTitle: 'Tecnologias Desenvolvidas',
       viewDetails: 'Ver Detalhes',
+
       jobs: {
         job1: {
+          position: 'Support Consultant - GOC (LDC)',
+          description: 'Atuo na Louis Dreyfus Company prestando suporte técnico para aplicações e serviços críticos de negócios, diagnosticando e solucionando incidentes, resolvendo problemas operacionais e garantindo a confiabilidade e a performance dos sistemas. Colaboro com equipes multidisciplinares para entregar soluções eficazes, ao mesmo tempo em que contribuo para iniciativas de engenharia de software e automação de processos para elevar a eficiência, escalabilidade e excelência operacional.',
+          location: 'São Paulo, SP',
+        },
+        job2: {
           position: 'Support Analyst',
           description: 'Atuo na resolução de tickets de suporte ao cliente, solucionando problemas nas plataformas e esclarecendo dúvidas sobre o sistema. Também participo no desenvolvimento de melhorias sistêmicas e aplicações internas voltadas a aumentar a produtividade e a eficiência operacional. Durante minha jornada na Scope, desenvolvi softwares de automação e integrações via API que modernizaram processos internos, como um sistema de emissão automática de notas fiscais integrado à SEFAZ, sites para conversão de códigos criptografados que substituíram planilhas manuais e um RPA para automações web repetitivas, reduzindo tempo e erros operacionais. Além disso, contribuí na programação e testes de equipamentos de telemetria veicular e na criação de materiais de treinamento para aprimorar a experiência dos cliente',
           location: 'São Paulo, SP',
         },
-        job2: {
+        job3: {
           position: 'Especialista em Treinamento de IA',
           description: 'Atuo no treinamento e aprimoramento de modelos de IA, avaliando e ajustando prompts e respostas em inglês e português. Trabalho com uma ampla variedade de temas, com foco principal na análise de códigos gerados por IA, realizando tarefas como debug, refatoração e testes de qualidade para garantir respostas mais precisas, coerentes e eficientes.',
           location: 'São Paulo, SP (remoto)',
         },
-        job3: {
+        job4: {
           position: 'Professor de Inglês',
           description: 'Ministrei aulas de Inglês em formato híbrido, com parte dos alunos presencialmente e outra parte online. Elaborei materiais de estudo personalizados e criei um ambiente virtual no Discord com dicas, anotações e exercícios complementares. Além disso, promovi dinâmicas em grupo para tornar o aprendizado mais interativo e engajador, potencializando a evolução no idioma de forma colaborativa.',
           location: 'São Paulo, SP',

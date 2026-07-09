@@ -8,10 +8,11 @@ import { useOutsideClick } from '@/hooks/use-outside-click';
 import scope from "../assets/scope.jpg";
 import outlier from "../assets/outiler.avif";
 import teacher from "../assets/teacher.png";
+import amaris from "../assets/amaris_logo.jpg";
 
 interface Job {
   id: string;
-  company: string;
+  company: string; 
   startDate: string;
   endDate: string | null;
   technologies: string[];
@@ -25,16 +26,23 @@ const Experience = () => {
   const id = useId();
 
   const experiences: Job[] = [
+      {    id: "job1",
+      company: "Amaris Consulting",
+      startDate: "2026-06",
+      endDate: null,
+      technologies: ["Azure", "ServiceNow", "Python", "Solarwinds", "IT infrastructure", "SQL"],
+      logo: amaris,
+    },    
     {
-      id: "job1",
+      id: "job2",
       company: "Scope Technology",
       startDate: "2023-05",
-      endDate: null,
+      endDate: "2026-06",
       technologies: ["Excel", "TypeScript", "React", "IoT", "Canva", "Python", "Node.js"],
       logo: scope,
     },
     {
-      id: "job2",
+      id: "job3",
       company: "Outlier",
       startDate: "2024-10",
       endDate: null,
@@ -42,7 +50,7 @@ const Experience = () => {
       logo: outlier,
     },
     {
-      id: "job3",
+      id: "job4",
       company: "",
       startDate: "2024-04",
       endDate: "2024-12",

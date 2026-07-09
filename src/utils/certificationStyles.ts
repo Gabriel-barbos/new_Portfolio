@@ -109,6 +109,18 @@ export interface ThemeStyle {
       glowGradient: 'linear-gradient(135deg, rgba(5,25,51,0.85) 0%, rgba(30,58,138,0.65) 60%, rgba(29,78,216,0.5) 100%)',
       specialBadgeGradient: 'from-[#051933] via-blue-900 to-blue-700',
     },
+    anthropic: {
+      gradient: 'from-[#D97F62] via-[#C96442] to-[#8B3A2A]',
+      borderColor: 'border-orange-200 dark:border-[#6B3020]',
+      hoverBorder: 'hover:border-[#D97F62] dark:hover:border-[#C96442]',
+      accentColor: 'text-[#C96442] dark:text-[#E8A080]',
+      badgeColor: 'bg-orange-50 text-[#8B3A2A] border-orange-200 dark:bg-[#3A1A0A]/40 dark:text-[#E8A080] dark:border-[#6B3020]',
+      shadow: 'shadow-md',
+      hoverShadow: 'hover:shadow-lg hover:shadow-[#C96442]/20',
+      glowColor: 'rgba(201,100,66,0.6)',
+      glowGradient: 'linear-gradient(135deg, rgba(217,127,98,0.75) 0%, rgba(201,100,66,0.65) 50%, rgba(139,58,42,0.55) 100%)',
+      specialBadgeGradient: 'from-[#D97F62] via-[#C96442] to-[#8B3A2A]',
+    },
     default: {
       gradient: 'from-gray-600 to-gray-800',
       borderColor: 'border-border',

@@ -1,13 +1,13 @@
 import google from "../assets/icons/google1.png";
 import ibm from "../assets/icons/ibm1.png";
 import azure from "../assets/icons/azure.png";
-import santander from "../assets/icons/santander.png";
 import dio from "../assets/icons/dio2.png";
 import bradesco from "../assets/icons/bradesco.png";
 import jovem from "../assets/icons/eng.png";
 import aws from "../assets/icons/aws.png";
 import fiap from "../assets/icons/fiap.png";
 import alura from "../assets/icons/alura.png";
+import anthropic from "../assets/icons/antropic.png";
 
 export interface Certification {
   id: number;
@@ -18,7 +18,7 @@ export interface Certification {
   credentialUrl: string;
   skills: string[];
   type: 'certification' | 'course';
-  theme: 'google' | 'azure' | 'ibm' | 'dio' | 'santander' | 'aws' | 'meta' | 'default' | 'fiap' | 'alura';
+  theme: 'google' | 'azure' | 'ibm' | 'dio' | 'santander' | 'aws' | 'meta' | 'default' | 'fiap' | 'alura' | 'anthropic';
   isSpecial?: boolean;
 }
 
@@ -46,6 +46,19 @@ export const certifications: Certification[] = [
     type: "certification",
     theme: "aws",
     isSpecial: true
+  },
+
+  {
+    id: 22,
+    name: " AI Fluency Framework & Foundations",
+    issuer: "Anthropic",
+    issuerLogo: anthropic,
+    date: "2026-05-05",
+    credentialUrl: "https://verify.skilljar.com/c/3uohh4739ww8",
+    skills: ["AI Literacy", "Prompt Engineering", "LLM", "Claude", "AI Ethics"],
+    type: "certification",
+    theme: "anthropic",
+    isSpecial: false
   },
 
     {
