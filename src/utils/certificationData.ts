@@ -55,7 +55,7 @@ export const certifications: Certification[] = [
     issuerLogo: anthropic,
     date: "2026-05-05",
     credentialUrl: "https://verify.skilljar.com/c/3uohh4739ww8",
-    skills: ["AI Literacy", "Prompt Engineering", "LLM", "Claude", "AI Ethics"],
+    skills: ["AI Literacy", "Prompt Engineering", "LLM", "Claude", "AI Ethics "],
     type: "certification",
     theme: "anthropic",
     isSpecial: false
