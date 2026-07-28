@@ -86,6 +86,19 @@ export const certifications: Certification[] = [
     theme: "alura",
     isSpecial: true
   },
+     {
+    id: 8,
+    name: "ITIL",
+    issuer: "FIAP",
+    issuerLogo: fiap,
+    date: "2026-07-17",
+    credentialUrl: "https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=ed90b24504c4774877f2e3c4ac70bb1f&action=view",
+    skills: ["ITIL", "Support", "Troubleshooting", "Incident Management", "Change Management"],
+    type: "certification",
+    theme: "fiap",
+    isSpecial: false
+  },
+
 
   {
     id: 3,

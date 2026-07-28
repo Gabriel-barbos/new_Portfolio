@@ -29,6 +29,7 @@ export const translations: Translations = {
       about: 'About',
       skills: 'Skills',
       projects: 'Projects',
+      g7: 'Software House',
       experience: 'Experience',
       education: 'Education',
       certifications: 'Certifications',
@@ -183,9 +184,43 @@ export const translations: Translations = {
         quickReply: "Quick reply guaranteed →",
         openButton: "Open WhatsApp"
       }
-    }
-  
+    },
 
+    g7Section: {
+      badge: "My Software House",
+      title: "G7 Software House",
+      subtitle: "Engineering for companies that view software as a competitive edge.",
+      description1: "We are a software house focused on custom digital products — web platforms, automations, and scalable architectures designed for businesses going beyond off-the-shelf tools.",
+      description2: "We act as an extension of your tech team: solid architecture, clean code, and infrastructure built to scale.",
+      cta: "Visit G7 Software House",
+      stats: {
+        projects: "Delivered Systems",
+        projectsDesc: "Production-ready digital products",
+        experience: "Years of Experience",
+        experienceDesc: "Software engineering expertise",
+        uptime: "Average Uptime",
+        uptimeDesc: "Reliable & resilient cloud infra",
+        monitoring: "Observability",
+        monitoringDesc: "24/7 Real-time telemetry"
+      },
+      bento: {
+        item1Title: "Custom Software Engineering",
+        item1Desc: "Bespoke web platforms, SaaS applications, and enterprise software built with modern tech stacks.",
+        item2Title: "AI & Process Automation",
+        item2Desc: "Custom AI agents, intelligent workflows, and RPA automations reducing manual operational effort.",
+        item3Title: "Cloud & Scalable Infrastructure",
+        item3Desc: "High availability hosting, redundant storage, automated backups, and 99.99% uptime performance.",
+        item4Title: "API & System Integration",
+        item4Desc: "Connecting your business tools into seamless real-time data flows, telemetry, and payment gateways."
+      },
+      mockup: {
+        title: "G7 System Engine",
+        status: "OPERATIONAL",
+        metric1: "Active Services",
+        metric2: "Latency",
+        metric3: "Deploy Status"
+      }
+    }
   },
 
   pt: {
@@ -207,6 +242,7 @@ export const translations: Translations = {
       about: 'Sobre',
       skills: 'Habilidades',
       projects: 'Projetos',
+      g7: 'Software House',
       experience: 'Experiência',
       education: 'Formação',
       certifications: 'Certificados',
@@ -360,6 +396,42 @@ export const translations: Translations = {
         logoAlt: "Logo do WhatsApp",
         quickReply: "Resposta rápida garantida →",
         openButton: "Abrir WhatsApp"
+      }
+    },
+
+    g7Section: {
+      badge: "Conheça minha Software House",
+      title: "G7 Software House",
+      subtitle: "Engenharia para empresas que tratam software como vantagem competitiva.",
+      description1: "Somos uma software house focada em produtos digitais sob medida — sistemas web, automações e plataformas escaláveis para quem vai além do que ferramentas de prateleira permitem.",
+      description2: "Atuamos como extensão do seu time de tecnologia: arquitetura sólida, código limpo e infraestrutura pronta para escalar.",
+      cta: "Conhecer G7 Software House",
+      stats: {
+        projects: "Sistemas entregues",
+        projectsDesc: "Produtos digitais em produção",
+        experience: "Anos de experiência",
+        experienceDesc: "Experiência em engenharia",
+        uptime: "Uptime médio",
+        uptimeDesc: "Infraestrutura confiável",
+        monitoring: "Observabilidade",
+        monitoringDesc: "Monitoramento em tempo real"
+      },
+      bento: {
+        item1Title: "Desenvolvimento Sob Medida",
+        item1Desc: "Sistemas web complexos, aplicações SaaS e plataformas corporativas desenvolvidas com tecnologias modernas.",
+        item2Title: "Automação & Inteligência Artificial",
+        item2Desc: "Agentes de IA customizados, automações de processos e RPA eliminando trabalho operacional repetitivo.",
+        item3Title: "Cloud & Infraestrutura Escalável",
+        item3Desc: "Hospedagem de alta disponibilidade, backups automáticos e infraestrutura pronta para alto tráfego.",
+        item4Title: "Integrações & APIs",
+        item4Desc: "Conexão em tempo real entre seus sistemas, gateways de pagamento, nota fiscal e serviços externos."
+      },
+      mockup: {
+        title: "G7 System Engine",
+        status: "OPERACIONAL",
+        metric1: "Serviços Ativos",
+        metric2: "Latência Média",
+        metric3: "Status de Deploy"
       }
     }
   },
