@@ -403,7 +403,7 @@ export const translations: Translations = {
       badge: "Conheça minha Software House",
       title: "G7 Software House",
       subtitle: "Engenharia para empresas que tratam software como vantagem competitiva.",
-      description1: "Somos uma software house focada em produtos digitais sob medida — sistemas web, automações e plataformas escaláveis para quem vai além do que ferramentas de prateleira permitem.",
+      description1: "Somos uma software house focada em produtos digitais sob medida, sistemas web, automações e plataformas escaláveis para quem vai além do que ferramentas de prateleira permitem.",
       description2: "Atuamos como extensão do seu time de tecnologia: arquitetura sólida, código limpo e infraestrutura pronta para escalar.",
       cta: "Conhecer G7 Software House",
       stats: {
