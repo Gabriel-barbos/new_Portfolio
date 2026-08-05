@@ -98,18 +98,69 @@ export const certifications: Certification[] = [
     theme: "fiap",
     isSpecial: false
   },
+       {
+    id: 9,
+    name: "Machine Learning introduction",
+    issuer: "Microsoft",
+    issuerLogo: azure,
+    date: "2026-07-23",
+    credentialUrl: "https://learn.microsoft.com/api/achievements/share/pt-br/GabrielBarbosa-4747/D3XK7KLJ?sharingId=F1C330B23F9BEFC9",
+    skills: ["Machine Learning", "AI", "Azure", "Algorithms","Data"],
+    type: "certification",
+    theme: "azure",
+    isSpecial: false
+  },
 
+        {
+    id: 10,
+    name: "Microsoft Cloud Adoption Framework Introduction",
+    issuer: "Microsoft",
+    issuerLogo: azure,
+    date: "2026-07-21",
+    credentialUrl: "https://learn.microsoft.com/api/achievements/share/pt-br/GabrielBarbosa-4747/9AQ64BAU?sharingId=F1C330B23F9BEFC9",
+    skills: ["Cloud Adoption Framework", "Cloud Strategy", "Azure", "Governance"],
+    type: "certification",
+    theme: "azure",
+    isSpecial: false
+  },
 
-  {
-    id: 3,
-    name: "React: desenvolvendo com JavaScript",
-    issuer: "Alura",
-    issuerLogo: alura,
-    date: "2024-06-10",
-    credentialUrl: "https://cursos.alura.com.br/certificate",
-    skills: ["React", "JavaScript", "Hooks", "Component Design"],
+          {
+    id: 11,
+    name: "Develop AI Agents with Microsoft Foundry and Visual Studio Code",
+    issuer: "Microsoft",
+    issuerLogo: azure,
+    date: "2026-08-02",
+    credentialUrl: "https://learn.microsoft.com/api/achievements/share/pt-br/GabrielBarbosa-4747/WMBHTY2N?sharingId=F1C330B23F9BEFC9",
+    skills: ["Ai Agents", "Microsoft Foundry", "Visual Studio Code", "AI", "LLM"],
     type: "course",
-    theme: "alura",
+    theme: "azure",
+    isSpecial: false
+  },
+
+         {
+    id: 12,
+    name: "Train and Evaluate Regression Models",
+    issuer: "Microsoft",
+    issuerLogo: azure,
+    date: "2026-08-05",
+    credentialUrl: "https://learn.microsoft.com/api/achievements/share/pt-br/GabrielBarbosa-4747/K9NPWEGB?sharingId=F1C330B23F9BEFC9",
+    skills: ["Machine Learning", "AI", "Azure", "Algorithms", "Data Structures", "Statistical Analysis"],
+    type: "course",
+    theme: "azure",
+    isSpecial: false
+  },
+
+          {
+    id: 13,
+    name: "Integrate MCP tools with AI agents at Azure",
+    issuer: "Microsoft",
+    issuerLogo: azure,
+    date: "2026-08-05",
+    credentialUrl: "https://learn.microsoft.com/api/achievements/share/pt-br/GabrielBarbosa-4747/H249HGC8?sharingId=F1C330B23F9BEFC9",
+    skills: ["AI Agents", "MCP", "Azure", "LLM", "Cloud Computing"],
+    type: "course",
+    theme: "azure",
+    isSpecial: false
   },
 
   {
