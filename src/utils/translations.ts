@@ -89,7 +89,7 @@ export const translations: Translations = {
           location: 'São Paulo, SP',
         },
         job2: {
-          position: 'Support Analyst',  
+          position: 'Support Analyst & Software Engineer',  
           description: 'I work on resolving customer support tickets, troubleshooting platform issues, and clarifying system doubts. I also participate in developing systemic improvements and internal applications designed to increase productivity and operational efficiency. During my journey at Scope, I developed automation software and API integrations that modernized internal processes, including an automatic invoice issuance system integrated with SEFAZ, web systems for converting encrypted codes that replaced manual spreadsheets, and an RPA for repetitive web automations, reducing operational time and errors. Additionally, I contributed to programming and testing vehicle telemetry equipment and creating training materials to improve the customer experience.',
           location: 'São Paulo, SP',
         },
@@ -304,7 +304,7 @@ export const translations: Translations = {
           location: 'São Paulo, SP',
         },
         job2: {
-          position: 'Support Analyst',
+          position: 'Support Analyst & Software Engineer',
           description: 'Atuo na resolução de tickets de suporte ao cliente, solucionando problemas nas plataformas e esclarecendo dúvidas sobre o sistema. Também participo no desenvolvimento de melhorias sistêmicas e aplicações internas voltadas a aumentar a produtividade e a eficiência operacional. Durante minha jornada na Scope, desenvolvi softwares de automação e integrações via API que modernizaram processos internos, como um sistema de emissão automática de notas fiscais integrado à SEFAZ, sites para conversão de códigos criptografados que substituíram planilhas manuais e um RPA para automações web repetitivas, reduzindo tempo e erros operacionais. Além disso, contribuí na programação e testes de equipamentos de telemetria veicular e na criação de materiais de treinamento para aprimorar a experiência dos cliente',
           location: 'São Paulo, SP',
         },

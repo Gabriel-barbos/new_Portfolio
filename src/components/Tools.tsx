@@ -6,18 +6,16 @@ import { Badge } from './ui/badge';
 import { motion } from "framer-motion";
 import { LampContainer } from "../components/ui/lamp";
 
-// icons
+// Icons
 import git from '../assets/icons-globe/git.png';
 import github from '../assets/icons/github2.webp';
 import fastapi from '../assets/icons-globe/fastapi.png';
-import aceternity from "../assets/icons/aceternity.png";
-import antdesign from "../assets/icons/antdesign.svg";
-import autocad from "../assets/icons/autocad.png";
-import bootstrap from "../assets/icons/bootstrap.png";
+import servicenow from '../assets/icons/servicenow.svg';
+import sap from '../assets/icons/SAP-Logo.png';
+import azure from '../assets/icons/azure.png';
 import canva from "../assets/icons/canva.png";
 import excel from "../assets/icons/excel.png";
 import figma from "../assets/icons/figma.png";
-import magicUI from "../assets/icons/magicUI.png";
 import notion from "../assets/icons/notion.png";
 import powerpoint from "../assets/icons/powerpoint.png";
 import sketchup from "../assets/icons/sketchup.png";
@@ -25,13 +23,10 @@ import teams from "../assets/icons/teams.png";
 import video from "../assets/icons/video2.png";
 import windows from "../assets/icons/windows.png";
 import word from "../assets/icons/word.png";
-import vscode from "../assets/icons/vscode.png";
-import sheets from "../assets/icons/sheets.png";
 import claude from "../assets/icons/claude.webp";
 import antigravity from "../assets/icons/antigravity.jpg";
 import expo from "../assets/icons/expo.png";
 import codex from "../assets/icons/codex.png";
-
 
 type SkillLevel = 'Básico' | 'Intermediário' | 'Avançado';
 
@@ -50,12 +45,12 @@ const Tools = () => {
     { name: 'Claude Code', icon: claude, level: 'Avançado' },
     { name: 'Antigravity', icon: antigravity, level: 'Avançado' },
     { name: 'Expo', icon: expo, level: 'Avançado' },
-    { name: 'AutoCad', icon: autocad, level: 'Intermediário' },
+    { name: 'ServiceNow', icon: servicenow, level: 'Avançado' },
     { name: 'Git', icon: git, level: 'Avançado' },
-    { name: 'Github', icon: github, level: 'Intermediário' },
+    { name: 'GitHub', icon: github, level: 'Intermediário' },
     { name: 'FastAPI', icon: fastapi, level: 'Intermediário' },
-    { name: 'Visual Studio Code', icon: vscode, level: 'Avançado' },
-    { name: 'Aceternity UI', icon: aceternity, level: 'Intermediário' },
+    { name: 'SAP', icon: sap, level: 'Intermediário' },
+    { name: 'Azure', icon: azure, level: 'Intermediário' },
     { name: 'Notion', icon: notion, level: 'Avançado' },
     { name: 'Canva', icon: canva, level: 'Avançado' },
     { name: 'Codex', icon: codex, level: 'Avançado' },
@@ -74,7 +69,7 @@ const Tools = () => {
   };
 
   return (
-    <section id="tools" className="bg-secondary/30 dark:bg-gray-900/50 ">
+    <section id="tools" className="bg-secondary/30 dark:bg-gray-900/50 pb-20">
       <div className="bg-secondary/30 dark:bg-gray-900/50">
         <LampContainer className="!bg-transparent">
           <motion.h1
@@ -92,42 +87,57 @@ const Tools = () => {
         </LampContainer>
       </div>
 
-      <div className="w-full max-w-[1000px] mx-auto px-4 -mt-12">
-        <div className="border border-border/50 rounded-xl p-4 bg-card/60 dark:bg-card/50 backdrop-blur-sm">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
-            {tools.map((skill, index) => (
-              <div
-                key={index}
-                className="group relative rounded-lg hover:shadow-md transition-shadow"
-              >
-                <div className="relative p-4 transition-all duration-500 ease-out hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 dark:hover:from-primary/10 dark:hover:to-primary/5 group-hover:scale-105">
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 rounded-lg blur-sm animate-pulse"></div>
-                  </div>
+      <div className="w-full max-w-[1020px] mx-auto px-4 -mt-12 sm:-mt-16 relative z-10">
+        {/* Single unified grid container matching original structure */}
+        <div className="border border-border/50 dark:border-white/10 rounded-2xl p-4 sm:p-6 bg-card/60 dark:bg-card/40 backdrop-blur-md shadow-xl">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2.5 sm:gap-3">
+            {tools.map((skill, index) => {
+              const isAdvanced = skill.level === 'Avançado';
 
-                  <div className="relative z-10">
-                    <div className="flex justify-center mb-4">
-                      <div className="w-20 h-20 rounded-full border border-border/30 dark:border-gray-600/30 bg-background/80 dark:bg-gray-900/80 flex items-center justify-center p-3 group-hover:border-primary/50 group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-500 backdrop-blur-sm">
-                        <img
-                          src={skill.icon}
-                          alt={`${skill.name} icon`}
-                          className="w-10 h-10 object-contain transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
-                        />
-                      </div>
+              return (
+                <div
+                  key={index}
+                  className="group relative rounded-xl p-3.5 sm:p-4 flex flex-col items-center justify-between text-center transition-all duration-300 hover:bg-primary/[0.06] dark:hover:bg-white/[0.04] hover:scale-105"
+                >
+                  {/* Subtle hover glow backdrop */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                  <div className="relative z-10 w-full flex flex-col items-center">
+                    {/* Standardized Icon Container: fixes background mismatch across all logos */}
+                    <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-2xl border border-border/40 dark:border-white/10 bg-slate-100/80 dark:bg-slate-900/80 flex items-center justify-center p-2.5 mb-3 group-hover:border-primary/50 group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300 backdrop-blur-sm overflow-hidden">
+                      <img
+                        src={skill.icon}
+                        alt={`${skill.name} icon`}
+                        className="w-10 h-10 object-contain rounded-lg transition-transform duration-300 group-hover:scale-110"
+                      />
                     </div>
 
-                    <div className="flex flex-col items-center text-center gap-2">
-                      <h3 className="font-medium text-sm text-foreground/90 dark:text-gray-200 group-hover:text-foreground transition-colors duration-300">
-                        {skill.name}
-                      </h3>
-                      <Badge className="border-transparent bg-sky-200 text-sky-900 hover:bg-sky-300 transition-colors dark:bg-sky-800 dark:text-sky-100 dark:hover:bg-sky-700">
-                        {skillLevelMap[skill.level]}
-                      </Badge>
-                    </div>
+                    {/* Tool Name */}
+                    <h3 className="font-medium text-xs sm:text-sm text-foreground/90 dark:text-gray-200 group-hover:text-primary transition-colors duration-200 mb-2 truncate max-w-full">
+                      {skill.name}
+                    </h3>
+
+                    {/* Skill Level Badge in cohesive Blue Tones */}
+                    <Badge
+                      className={`border transition-colors text-[10px] sm:text-xs font-semibold px-2.5 py-0.5 rounded-full ${
+                        isAdvanced
+                          ? 'bg-blue-600/15 text-blue-700 dark:text-sky-300 border-blue-500/30 hover:bg-blue-600/25'
+                          : 'bg-sky-500/10 text-sky-800 dark:text-sky-200 border-sky-400/25 hover:bg-sky-500/20'
+                      }`}
+                    >
+                      <span
+                        className={`mr-1.5 inline-block h-1.5 w-1.5 rounded-full ${
+                          isAdvanced
+                            ? 'bg-blue-600 dark:bg-sky-400'
+                            : 'bg-sky-400 dark:bg-sky-500'
+                        }`}
+                      />
+                      {skillLevelMap[skill.level]}
+                    </Badge>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
