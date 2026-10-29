@@ -24,6 +24,42 @@ export interface Certification {
 
 export const certifications: Certification[] = [
   {
+    id: 101,
+    name: "Arquitetura de Soluções: papel do arquiteto e pensamento sistêmico",
+    issuer: "Alura",
+    issuerLogo: alura,
+    date: "2026-10-15",
+    credentialUrl: "https://cursos.alura.com.br/user/Gabriel-barbosa79/course/papel-do-arquiteto-e-pensamento-arquitetural/certificate",
+    skills: ["Arquitetura de Soluções", "Pensamento Sistêmico", "Cloud", "Sistemas Distribuídos", "Governança"],
+    type: "course",
+    theme: "alura",
+    isSpecial: false
+  },
+  {
+    id: 102,
+    name: "Gestão Azure Cloud: analise, monitore e otimize custos na nuvem",
+    issuer: "Alura",
+    issuerLogo: alura,
+    date: "2026-10-16",
+    credentialUrl: "https://cursos.alura.com.br/user/Gabriel-barbosa79/course/gestao-cloud-azure-analise-monitore-otimize-custos-nuvem/certificate",
+    skills: ["Azure", "FinOps", "Cost Management", "Cloud Monitoring", "Otimização de Custos"],
+    type: "course",
+    theme: "azure",
+    isSpecial: false
+  },
+  {
+    id: 103,
+    name: "Relacionamento Interpessoal e Gestão de Conflitos",
+    issuer: "Alura",
+    issuerLogo: alura,
+    date: "2026-10-17",
+    credentialUrl: "https://cursos.alura.com.br/user/Gabriel-barbosa79/course/relacionamento-interpessoal/certificate",
+    skills: ["Gestão Interpessoal", "Comunicação", "Soft Skills", "Liderança", "Resolução de Conflitos"],
+    type: "course",
+    theme: "alura",
+    isSpecial: false
+  },
+  {
     id: 1,
     name: "Google Cloud Computing Foundations Certificate",
     issuer: "Google Cloud",
@@ -94,6 +130,42 @@ export const certifications: Certification[] = [
     date: "2026-07-17",
     credentialUrl: "https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=ed90b24504c4774877f2e3c4ac70bb1f&action=view",
     skills: ["ITIL", "Support", "Troubleshooting", "Incident Management", "Change Management"],
+    type: "certification",
+    theme: "fiap",
+    isSpecial: false
+  },
+  {
+    id: 104,
+    name: "Design Thinking",
+    issuer: "FIAP",
+    issuerLogo: fiap,
+    date: "2026-10-20",
+    credentialUrl: "https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=28e19e03b250d61edce2f75d4c338dd0&action=view",
+    skills: ["Design Thinking", "Inovação", "Product Discovery", "Prototipação", "UX"],
+    type: "certification",
+    theme: "fiap",
+    isSpecial: false
+  },
+  {
+    id: 105,
+    name: "User Experience (UX)",
+    issuer: "FIAP",
+    issuerLogo: fiap,
+    date: "2026-10-22",
+    credentialUrl: "https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=5e55e36f0cd785e6dc1804e6052d3162&action=view",
+    skills: ["UX Design", "User Research", "Wireframing", "UI/UX", "Usabilidade"],
+    type: "certification",
+    theme: "fiap",
+    isSpecial: false
+  },
+  {
+    id: 106,
+    name: "Inteligência Artificial e Computacional",
+    issuer: "FIAP",
+    issuerLogo: fiap,
+    date: "2026-10-25",
+    credentialUrl: "https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=cf813eb8464dbffe59ec7accadb232d7&action=view",
+    skills: ["Inteligência Artificial", "Machine Learning", "Algoritmos", "Computação Cognitiva", "Data Science"],
     type: "certification",
     theme: "fiap",
     isSpecial: false
