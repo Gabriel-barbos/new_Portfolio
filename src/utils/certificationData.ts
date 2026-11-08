@@ -24,6 +24,18 @@ export interface Certification {
 
 export const certifications: Certification[] = [
   {
+    id: 107,
+    name: "Imersão Engenharia de Software: Dev na Era da IA",
+    issuer: "Google & Alura",
+    issuerLogo: google,
+    date: "2026-11-04",
+    credentialUrl: "https://cursos.alura.com.br/immersion/imersao-engenharia-software-ia-google/user/Gabriel-barbosa79/certificate",
+    skills: ["Engenharia de Software", "Inteligência Artificial", "Antigravity", "Google Cloud", "Dev com IA"],
+    type: "certification",
+    theme: "google",
+    isSpecial: true
+  },
+  {
     id: 101,
     name: "Arquitetura de Soluções: papel do arquiteto e pensamento sistêmico",
     issuer: "Alura",
