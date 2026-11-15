@@ -252,7 +252,7 @@ export const translations: Translations = {
 
     hero: {
       greeting: 'Olá, eu sou',
-      role: 'Desenvolvedor de Software',
+      role: 'Engenheiro de Software',
       cta: 'Meus projetos',
       download: 'Baixar Currículo',
     },

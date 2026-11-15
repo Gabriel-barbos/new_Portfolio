@@ -1,0 +1,193 @@
+.orbit-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  isolation: isolate;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.orbit-container[data-draggable] {
+  cursor: grab;
+  touch-action: pan-y pinch-zoom;
+}
+
+.orbit-container[data-dragging],
+.orbit-container[data-dragging] * {
+  cursor: grabbing;
+}
+
+.orbit-path-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.orbit-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform, opacity;
+}
+
+.orbit-container[data-intro] .orbit-item {
+  opacity: 0;
+}
+
+.orbit-item[data-clickable] {
+  cursor: pointer;
+}
+
+.orbit-item-inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--orbit-radius, 0px);
+  box-shadow: 0 calc(var(--orbit-shadow, 0) * 16px) calc(var(--orbit-shadow, 0) * 36px)
+    rgba(0, 0, 0, calc(var(--orbit-shadow, 0) * 0.45));
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.orbit-item:hover .orbit-item-inner,
+.orbit-item:focus-visible .orbit-item-inner {
+  transform: scale(var(--orbit-hover-scale, 1));
+}
+
+.orbit-item:focus-visible {
+  outline: none;
+}
+
+.orbit-item:focus-visible .orbit-item-inner {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.orbit-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+.orbit-center-content {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.orbit-center-content > * {
+  pointer-events: auto;
+}
+
+/* Portfolio Tech Stack Liquid Glass Badge Theme */
+.orbit-tech-theme .orbit-item-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20%;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.68) 0%,
+    rgba(241, 245, 249, 0.36) 55%,
+    rgba(219, 234, 254, 0.45) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px) saturate(190%);
+  -webkit-backdrop-filter: blur(16px) saturate(190%);
+  box-shadow:
+    inset 0 1.5px 1px rgba(255, 255, 255, 0.95),
+    inset 1px 0 1px rgba(255, 255, 255, 0.55),
+    inset 0 -2px 4px rgba(37, 99, 235, 0.14),
+    0 calc(var(--orbit-shadow, 0.35) * 16px) calc(var(--orbit-shadow, 0.35) * 36px) rgba(15, 23, 42, 0.16);
+}
+
+.orbit-tech-theme .orbit-item-inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    130deg,
+    rgba(255, 255, 255, 0.65) 0%,
+    rgba(255, 255, 255, 0.16) 38%,
+    rgba(255, 255, 255, 0) 62%
+  );
+  pointer-events: none;
+}
+
+.orbit-tech-theme .orbit-item-inner::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 65%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.dark .orbit-tech-theme .orbit-item-inner {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(30, 41, 59, 0.45) 55%,
+    rgba(37, 99, 235, 0.16) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow:
+    inset 0 1.5px 1px rgba(255, 255, 255, 0.35),
+    inset 1px 0 1px rgba(255, 255, 255, 0.14),
+    inset 0 -2px 6px rgba(59, 130, 246, 0.22),
+    0 calc(var(--orbit-shadow, 0.35) * 18px) calc(var(--orbit-shadow, 0.35) * 40px) rgba(0, 0, 0, 0.65);
+}
+
+.dark .orbit-tech-theme .orbit-item-inner::before {
+  background: linear-gradient(
+    130deg,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(255, 255, 255, 0.05) 40%,
+    rgba(255, 255, 255, 0) 65%
+  );
+}
+
+.dark .orbit-tech-theme .orbit-item-inner::after {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.orbit-tech-theme .orbit-item:hover .orbit-item-inner,
+.orbit-tech-theme .orbit-item[data-active] .orbit-item-inner {
+  border-color: rgba(96, 165, 250, 0.85);
+  box-shadow:
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 0.85),
+    inset 0 -2px 8px rgba(59, 130, 246, 0.35),
+    0 0 0 2px rgba(59, 130, 246, 0.28),
+    0 16px 36px -6px rgba(37, 99, 235, 0.5);
+}
+
+.orbit-tech-theme .orbit-image {
+  position: relative;
+  z-index: 1;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-item-inner {
+    transition: none;
+  }
+}
