@@ -24,6 +24,18 @@ export interface Certification {
 
 export const certifications: Certification[] = [
   {
+    id: 108,
+    name: "Azure by Alura",
+    issuer: "Alura",
+    issuerLogo: azure,
+    date: "2026-11-16",
+    credentialUrl: "https://cursos.alura.com.br/user/Gabriel-barbosa79/degree-conhecendo-azure-495959/certificate",
+    skills: ["Azure", "Cloud Computing", "Azure Functions", "VNet", "FinOps", "MySQL"],
+    type: "certification",
+    theme: "azure",
+    isSpecial: true
+  },
+  {
     id: 107,
     name: "Imersão Engenharia de Software: Dev na Era da IA",
     issuer: "Google & Alura",
@@ -45,6 +57,54 @@ export const certifications: Certification[] = [
     skills: ["Arquitetura de Soluções", "Pensamento Sistêmico", "Cloud", "Sistemas Distribuídos", "Governança"],
     type: "course",
     theme: "alura",
+    isSpecial: false
+  },
+  {
+    id: 111,
+    name: "Azure Functions: incorpore funções a uma loja virtual",
+    issuer: "Alura",
+    issuerLogo: alura,
+    date: "2026-11-16",
+    credentialUrl: "https://cursos.alura.com.br/user/Gabriel-barbosa79/course/azure-functions-incorpore-funcoes-loja-virtual/certificate",
+    skills: ["Azure Functions", "Serverless", "Queue Trigger", "Timer Trigger", "Cloud"],
+    type: "course",
+    theme: "azure",
+    isSpecial: false
+  },
+  {
+    id: 109,
+    name: "Azure Cloud: segurança e recursos avançados",
+    issuer: "Alura",
+    issuerLogo: alura,
+    date: "2026-11-11",
+    credentialUrl: "https://cursos.alura.com.br/user/Gabriel-barbosa79/course/azure-cloud-seguranca-recursos-avancados/certificate",
+    skills: ["Azure VNet", "Segurança em Nuvem", "Load Balancer", "Cloud Monitoring"],
+    type: "course",
+    theme: "azure",
+    isSpecial: false
+  },
+  {
+    id: 112,
+    name: "Gestão Cloud Azure: analise, monitore e otimize os custos na nuvem",
+    issuer: "Alura",
+    issuerLogo: alura,
+    date: "2026-10-28",
+    credentialUrl: "https://cursos.alura.com.br/user/Gabriel-barbosa79/course/gestao-cloud-azure-analise-monitore-otimize-custos-nuvem/certificate",
+    skills: ["Azure", "FinOps", "Cost Management", "Cloud Monitoring", "Otimização de Custos"],
+    type: "course",
+    theme: "azure",
+    isSpecial: false
+  },
+  {
+    id: 110,
+    name: "Azure Cloud: criando um servidor com banco de dados para receber uma aplicação",
+    issuer: "Alura",
+    issuerLogo: alura,
+    date: "2026-10-28",
+    credentialUrl: "https://cursos.alura.com.br/user/Gabriel-barbosa79/course/azure-cloud-criando-servidor-banco-dados-receber-aplicacao/certificate",
+    skills: ["Azure", "Virtual Machines", "MySQL", "Cloud Databases", "Deploy"],
+    type: "course",
+    theme: "azure",
     isSpecial: false
   },
   {

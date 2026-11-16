@@ -15,6 +15,8 @@ import powerbi from "../assets/icons-globe/powerbi.png"
 import claude from "../assets/icons/claude.png"
 import gemini from "../assets/icons/gemini.png"
 import telegram from "../assets/icons/telegram.png"
+import kotlin from "../assets/icons2/kotlin-svgrepo-com.svg"
+import c from "../assets/icons2/cp.svg"
 
 import impermaq from "../assets/projects/impermaq (2).png";
 import vendas from "../assets/projects/vendas.png";
@@ -29,6 +31,7 @@ import inmobel from "../assets/projects/inmobel.png"
 import jarvis from "../assets/projects/JARVIS.png"
 import aiLobby from "../assets/projects/Ailobby.png"
 import am from "../assets/projects/am.png"
+import f1 from "../assets/projects/f1dash.png"
 export type Locale = 'en' | 'pt';
 
 export interface Project {
@@ -57,7 +60,17 @@ interface ProjectTranslations {
 
 export const projectTranslations: ProjectTranslations = {
   pt: {
-
+14: {
+      title: 'F1 Smart Flash',
+      description: 'App para integração UDP com console para exibir informações do game, com iluminação Iot inteligente e engenheiro de corrida com IA',
+      features: [
+        'UDP parser - high performance code',
+        'Integração com Gemini Voice',
+        'Integração com IoT e ESP32',
+        'Aplicação mobile',
+      ],
+    },
+    
     12: {
       title: 'AI Lobby',
       description: 'Hub de agentes de IA especializadas em tarefas + bot telegram para interagir com os agentes',
@@ -339,6 +352,21 @@ export const projectTranslations: ProjectTranslations = {
 };
 
 export const projectsBaseData: Omit<Project, 'title' | 'description' | 'features'>[] = [
+
+    {
+    id: 14,
+    image: f1,
+    previewUrl: 'https://youtu.be/F2BJ0GHyhHI',
+    repoUrl: 'https://github.com/Gabriel-barbos/F1-Dash',
+    technologies: [
+      { name: 'TypeScript', icon: typescript },
+      {name: "Gemini Voice", icon: gemini},
+      {name: "React Native",  icon: reactNative },
+      {name: "Kotlin", icon: kotlin},
+      {name: "C++", icon: c},
+
+    ],
+  },
 
   {
     id: 12,

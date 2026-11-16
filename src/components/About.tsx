@@ -1,14 +1,70 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
 import { Github, Linkedin } from 'lucide-react';
 import { LiquidGlass } from '@/components/ui/liquid-glass';
 import prof from '../assets/profile.jpeg';
+import {
+  collectBuildTargets,
+  usePixelBuilder,
+} from './pixel-builder/PixelBuilderContext';
+import { PixelBuildText } from './pixel-builder/PixelBuildText';
 
 const About = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { theme } = useTheme();
   const isDark = theme === 'dark';
+
+  const { enqueueBuild } = usePixelBuilder();
+  const contentRef = useRef<HTMLDivElement | null>(null);
+  const nameRef = useRef<HTMLHeadingElement | null>(null);
+  const descRef = useRef<HTMLParagraphElement | null>(null);
+
+  const [nameRevealed, setNameRevealed] = useState(-1);
+  const [nameDone, setNameDone] = useState(false);
+  const [descRevealed, setDescRevealed] = useState(-1);
+  const [descDone, setDescDone] = useState(false);
+  const triggeredRef = useRef(false);
+
+  useEffect(() => {
+    if (triggeredRef.current) {
+      setNameDone(true);
+      setDescDone(true);
+    }
+  }, [language]);
+
+  useEffect(() => {
+    const el = contentRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry?.isIntersecting && !triggeredRef.current) {
+          triggeredRef.current = true;
+          observer.disconnect();
+
+          enqueueBuild({
+            id: 'about-name',
+            getTargets: () => collectBuildTargets(nameRef.current),
+            onReveal: (idx) => setNameRevealed((prev) => Math.max(prev, idx)),
+            onComplete: () => setNameDone(true),
+          });
+
+          enqueueBuild({
+            id: 'about-desc',
+            getTargets: () => collectBuildTargets(descRef.current),
+            onReveal: (idx) => setDescRevealed((prev) => Math.max(prev, idx)),
+            onComplete: () => setDescDone(true),
+          });
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [enqueueBuild]);
 
   return (
     <section
@@ -40,19 +96,33 @@ const About = () => {
           </div>
 
           {/* About content */}
-          <div className="lg:w-2/3">
+          <div ref={contentRef} className="lg:w-2/3">
             <div className="space-y-6 text-center lg:text-left">
               <div>
                 <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-primary font-semibold">
                   Software Engineer & AI Enthusiast
                 </span>
-                <h3 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1">
-                  Gabriel Barbosa
+                <h3
+                  ref={nameRef}
+                  className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1"
+                >
+                  <PixelBuildText
+                    segments={[{ text: 'Gabriel Barbosa' }]}
+                    revealedUpTo={nameRevealed}
+                    done={nameDone}
+                  />
                 </h3>
               </div>
 
-              <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed font-normal">
-                {t('about.description')}
+              <p
+                ref={descRef}
+                className="text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed font-normal"
+              >
+                <PixelBuildText
+                  segments={[{ text: t('about.description') }]}
+                  revealedUpTo={descRevealed}
+                  done={descDone}
+                />
               </p>
 
               {/* Thematic Liquid Glass Connect Buttons */}

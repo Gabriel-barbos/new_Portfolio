@@ -5,6 +5,11 @@ import GradientASCII from './ui/gradient-ascii';
 import { FileDown, Github, Linkedin, Mail, Sparkles } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
+import {
+  collectBuildTargets,
+  usePixelBuilder,
+} from './pixel-builder/PixelBuilderContext';
+import { PixelBuildText } from './pixel-builder/PixelBuildText';
 
 // ─── Hook: Magnetic Button ─────────────────────────────────────────────────────
 function useMagnetic(strength = 0.4) {
@@ -293,8 +298,9 @@ function ScrollProgress({ sections = [] }: { sections?: string[] }) {
 
 // ─── Main Hero Component ───────────────────────────────────────────────────────
 const Hero = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { theme } = useTheme();
+  const reduceMotion = useReducedMotion();
   const [mounted, setMounted] = useState(false);
   const isDark = theme === 'dark';
 
@@ -320,6 +326,42 @@ const Hero = () => {
 
   const sections = ['home', 'skills', 'projects', 'contact'];
   const horizonEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
+
+  const { enqueueBuild } = usePixelBuilder();
+  const descRef = useRef<HTMLParagraphElement | null>(null);
+  const [descRevealed, setDescRevealed] = useState(-1);
+  const [descDone, setDescDone] = useState(false);
+  const heroBuiltOnceRef = useRef(false);
+
+  // When language changes after initial build, show translated text immediately
+  useEffect(() => {
+    if (heroBuiltOnceRef.current) {
+      setDescDone(true);
+    }
+  }, [language]);
+
+  // Wait for all other Hero entrance animations (~3.0s) to finish before writing
+  useEffect(() => {
+    if (reduceMotion) {
+      setDescDone(true);
+      heroBuiltOnceRef.current = true;
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      heroBuiltOnceRef.current = true;
+
+      enqueueBuild({
+        id: 'hero-desc',
+        getTargets: () => collectBuildTargets(descRef.current),
+        onReveal: (idx) => setDescRevealed((prev) => Math.max(prev, idx)),
+        onComplete: () => setDescDone(true),
+      });
+    }, 3000);
+
+    return () => window.clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
@@ -442,24 +484,30 @@ const Hero = () => {
               </h1>
             </div>
 
-            {/* Description rising from bottom */}
-            <motion.div
-              initial={{ opacity: 0, y: 34, filter: 'blur(8px)' }}
-              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-              transition={{ duration: 0.9, delay: 0.9, ease: horizonEase }}
-              className="relative mb-10 px-4 py-2 rounded-2xl"
-            >
-              <p className="text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-200/90 max-w-2xl leading-relaxed font-normal drop-shadow-sm">
-                <span className="font-semibold text-slate-950 dark:text-white">
-                  {t('description.part1')}
-                </span>
-                {t('description.part2')}
-                <span className="text-blue-700 dark:text-sky-300 font-semibold">
-                  {t('description.highlight')}
-                </span>
-                {t('description.part3')}
+            {/* Description written letter-by-letter by the Pixel Companion */}
+            <div className="relative mb-10 px-4 py-2 rounded-2xl">
+              <p
+                ref={descRef}
+                className="text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-200/90 max-w-2xl leading-relaxed font-normal drop-shadow-sm"
+              >
+                <PixelBuildText
+                  segments={[
+                    {
+                      text: t('description.part1'),
+                      className: 'font-semibold text-slate-950 dark:text-white',
+                    },
+                    { text: t('description.part2') },
+                    {
+                      text: t('description.highlight'),
+                      className: 'text-blue-700 dark:text-sky-300 font-semibold',
+                    },
+                    { text: t('description.part3') },
+                  ]}
+                  revealedUpTo={descRevealed}
+                  done={descDone}
+                />
               </p>
-            </motion.div>
+            </div>
 
             {/* CTAs with Magnetic Effect & Bottom-to-Top Reveal */}
             <motion.div

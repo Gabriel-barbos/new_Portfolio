@@ -15,28 +15,33 @@ import Tools from '../components/Tools';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import FloatingButton from '../components/FloatingButton';
+import { PixelBuilderProvider } from '../components/pixel-builder/PixelBuilderContext';
+import { PixelBuilderOverlay } from '../components/pixel-builder/PixelBuilderOverlay';
 
 const Index = () => {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-grow">
-            <Hero />
-            <Skills />
-            <Projects />
-            <G7Section />
-            <About />
-            <Experience />
-            <Education />
-            <Certifications />
-            <Tools />
-            <Contact />
-          </main>
-          <Footer />
-          <FloatingButton />
-        </div>
+        <PixelBuilderProvider>
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-grow">
+              <Hero />
+              <Skills />
+              <Projects />
+              <G7Section />
+              <About />
+              <Experience />
+              <Education />
+              <Certifications />
+              <Tools />
+              <Contact />
+            </main>
+            <Footer />
+            <FloatingButton />
+            <PixelBuilderOverlay />
+          </div>
+        </PixelBuilderProvider>
       </LanguageProvider>
     </ThemeProvider>
   );
